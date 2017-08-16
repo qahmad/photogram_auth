@@ -16,9 +16,20 @@
       </tr>
 
       <% @photos.each do |photo| %>
+      
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+            <small>
+              <%= photo.created_at %>
+            </small>
+          </h3>
+        </div>      
+      
       <tr>
         <td><%= photo.caption %><p></td>
-        <td><img height="200" width="200" src="<%= photo.image %>"></img></td>
+        <td><img  src="<%= photo.image %>"></img></td>
         <td><%= photo.user_id %></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
@@ -31,6 +42,11 @@
         <% end %>  
           
         </td>
+          
+          </div>
+        </div>
+      </div>
+        
       </tr>
       <% end %>
     </table>
