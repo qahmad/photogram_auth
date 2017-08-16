@@ -41,6 +41,20 @@
             </form>
         </p>
 
+        <p>
+            <form action="/delete_like" method="post">
+              <!-- Hidden input for authenticity token to protect from forgery -->
+              <input name="authenticity_token" type="hidden" value="zl4rJ2vJCr1IhP3QCWzCpQV31MEd2oidMLkz/ck3aYSjgDa8duDEYWcHIAY5CTE0mYgZZlOHSAct6j8cxFzevw==">
+
+              <input type="hidden" name="photo_id" value="<%= photo.id %>">
+              <input type="hidden" name="user_id" value="<%= current_user.id %>">
+
+              <button class="btn btn-link">
+                <i class="fa fa-heart"></i>
+              </button>
+
+            </form>
+        </p>
 
   
           <div class="media-body">
