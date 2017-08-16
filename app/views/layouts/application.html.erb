@@ -44,6 +44,11 @@
           <li><a href="/likes">Likes</a></li>
           <li><a href="/photos">Photos</a></li>
           <li><a href="/users">Users</a></li>
+          
+          <% if current_user != nil %>
+          <li><a href="/users/<%= current_user.id %>">My Wall</a></li>
+          <% end %>
+          
           <li><a href="/rails/git" target="_blank">Git</a></li>
         </ul>
 
